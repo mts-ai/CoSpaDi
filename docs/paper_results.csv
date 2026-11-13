@@ -1,0 +1,10 @@
+model,compression_ratio,average_accuracy_percent,wikitext_perplexity,lambada_perplexity,paper_source
+Llama-3.2-1B,0.2,42.7,64,35,Table 1
+Llama-3.2-1B,0.3,33.7,290,660,Table 1
+Llama-3.2-1B,0.4,27.5,800,9200,Table 1
+Llama-3-8B,0.2,61.8,20,4.3,Table 3
+Llama-3-8B,0.3,53.7,45,9.2,Table 3
+Llama-3-8B,0.4,40.7,180,120,Table 3
+Qwen3-8B,0.2,65.7,18,4.9,Table 3
+Qwen3-8B,0.3,59.97,23,6.3,Table 3
+Qwen3-8B,0.4,50.3,36,15,Table 3

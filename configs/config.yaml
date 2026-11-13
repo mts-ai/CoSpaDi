@@ -1,0 +1,51 @@
+defaults:
+  - model: qwen3_06b
+  - method: ksvd_deployable
+  - statistics: default
+  - evaluation: quant14
+  - reporter: [json]
+  - _self_
+  - experiments: null
+
+project: CoSpaDi
+repo_root: ${hydra:runtime.cwd}
+run_dir: ${repo_root}/runs/${model.slug}/cr_${compression_ratio}/ks_${method.ks_ratio}_it_${method.iterations}_pow_${method.power_iterations}
+checkpoint_root: ${repo_root}/outputs
+calib_root: ${repo_root}/calibration/${model.slug}
+checkpoint_path: null
+compression_ratio: 0.2
+dry_run: false
+force: false
+
+stages:
+  collect: false
+  compress: true
+  evaluate: true
+  report: true
+
+reporters: {}
+reporting:
+  _target_: paperflow.reporting.CompositeReporter
+  reporters: ${reporters}
+
+components:
+  statistics: ${statistics}
+  compression:
+    _target_: paperflow.compression.CoSpaDiBackend
+  evaluation: ${evaluation}
+  reporter: ${reporting}
+  method: ${method}
+
+pipeline:
+  _target_: paperflow.pipeline.Pipeline
+  statistics: ${components.statistics}
+  compression: ${components.compression}
+  evaluation: ${components.evaluation}
+  reporter: ${components.reporter}
+  method: ${components.method}
+
+hydra:
+  run:
+    dir: ${repo_root}/runs/_hydra/${now:%Y-%m-%d_%H-%M-%S}
+  job:
+    chdir: false

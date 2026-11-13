@@ -1,0 +1,9 @@
+_target_: paperflow.evaluation.LMEvalHarness
+tasks: [mmlu, arc_easy, arc_challenge, hellaswag, piqa, lambada_openai, race, wikitext, sciq, openbookqa, winogrande, mathqa]
+batch_size: auto
+num_fewshot: null
+device: cuda:0
+dtype: bfloat16
+trust_remote_code: true
+output_dir: lm_eval
+limit: null

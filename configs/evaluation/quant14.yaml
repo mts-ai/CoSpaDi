@@ -1,0 +1,2 @@
+_target_: paperflow.evaluation.CoSpaDiEvaluation
+quant_coeffs: 14

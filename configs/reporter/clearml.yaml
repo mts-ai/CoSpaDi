@@ -1,0 +1,6 @@
+# @package reporters.clearml
+_target_: paperflow.reporting.ClearMLReporter
+project: CoSpaDi
+task_name: ${project}_${model.slug}_cr${compression_ratio}
+reuse_last_task_id: false
+enabled: true

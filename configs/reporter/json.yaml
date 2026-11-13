@@ -1,0 +1,3 @@
+# @package reporters.json
+_target_: paperflow.reporting.JsonReporter
+filename: results.json

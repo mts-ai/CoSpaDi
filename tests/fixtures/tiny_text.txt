@@ -1,0 +1,3 @@
+Sparse dictionary learning approximates a matrix using dictionary atoms and coefficients.
+Calibration activations describe the inputs of transformer projection layers.
+A language model predicts the next token from the preceding sequence.

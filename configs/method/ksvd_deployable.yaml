@@ -1,0 +1,10 @@
+_target_: paperflow.methods.MethodSpec
+name: ksvd
+iterations: 60
+power_iterations: 8
+ks_ratio: 2.0
+extra_args:
+  checkpoint-format: deployable_v1
+  coeff-bits: 14
+  storage-dtype: float16
+  factor-scaling: minimum

@@ -1,0 +1,56 @@
+cff-version: 1.2.0
+message: If you use CoSpaDi, please cite our paper.
+title: 'CoSpaDi: Compressing LLMs via Calibration-Guided Sparse Dictionary Learning'
+type: software
+version: 0.1.0
+authors:
+- family-names: Makhov
+  given-names: Denis
+- family-names: Shopkhoev
+  given-names: Dmitriy
+- family-names: Zhussip
+  given-names: Magauiya
+- family-names: Ali
+  given-names: Ammar
+- family-names: Lefkimmiatis
+  given-names: Stamatios
+license: Apache-2.0
+url: https://aclanthology.org/2026.findings-emnlp.284/
+preferred-citation:
+  type: conference-paper
+  title: 'CoSpaDi: Compressing LLMs via Calibration-Guided Sparse Dictionary Learning'
+  authors:
+  - family-names: Makhov
+    given-names: Denis
+  - family-names: Shopkhoev
+    given-names: Dmitriy
+  - family-names: Zhussip
+    given-names: Magauiya
+  - family-names: Ali
+    given-names: Ammar
+  - family-names: Lefkimmiatis
+    given-names: Stamatios
+  editors:
+  - family-names: Lee
+    given-names: Hung-Yi
+  - family-names: Dev
+    given-names: Sunipa
+  - family-names: Li
+    given-names: Jessy
+  - family-names: Elliott
+    given-names: Desmond
+  collection-title: 'Findings of the Association for Computational Linguistics: EMNLP
+    2026'
+  conference:
+    name: EMNLP 2026
+    location: Budapest, Hungary
+  publisher:
+    name: Association for Computational Linguistics
+  year: 2026
+  month: 10
+  start: 6005
+  end: 6031
+  doi: 10.18653/2026.findings-emnlp.284
+  url: https://aclanthology.org/2026.findings-emnlp.284/
+  isbn: 979-8-89176-462-0
+repository-code: https://github.com/mts-ai/CoSpaDi

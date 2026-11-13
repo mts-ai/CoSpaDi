@@ -1,0 +1,3 @@
+# @package reporters.tensorboard
+_target_: paperflow.reporting.TensorBoardReporter
+log_dir: tensorboard

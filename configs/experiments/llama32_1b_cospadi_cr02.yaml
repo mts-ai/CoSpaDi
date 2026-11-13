@@ -1,0 +1,19 @@
+# @package _global_
+# CoSpaDi paper configuration for unsloth/Llama-3.2-1B, CR=0.2.
+# Requires precomputed X^T X calibration statistics under calib_root.
+defaults:
+  - override /method: ksvd_deployable
+  - override /model: llama32_1b
+  - override /evaluation: quant14
+
+compression_ratio: 0.2
+calib_root: ${oc.env:COSPADI_CALIB_ROOT,${repo_root}/calibration}/unsloth/Llama-3.2-1B
+method:
+  iterations: 60
+  power_iterations: 8
+  ks_ratio: 1.6
+stages:
+  collect: false
+  compress: true
+  evaluate: true
+  report: true

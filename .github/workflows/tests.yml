@@ -1,0 +1,19 @@
+name: tests-and-build
+on:
+  push:
+  pull_request:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          python-version: '3.13.5'
+          enable-cache: true
+      - run: uv sync --locked --extra test --extra eval
+      - run: uv run --locked --no-sync pytest -q
+      - run: uv run --locked --no-sync python -m compileall -q paperflow
+      - run: uv run --locked --no-sync cospadi-run --help
+      - run: uv run --locked --no-sync cospadi-run experiments=qwen3_06b_cospadi_cr02 dry_run=true
+      - run: uv build

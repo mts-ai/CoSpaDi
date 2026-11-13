@@ -1,0 +1,19 @@
+_target_: paperflow.statistics.ActivationGramCollector
+dataset: HuggingFaceFW/fineweb
+subset: sample-10BT
+split: train
+text_column: text
+sampling: reference
+documents: 500
+samples: 256
+sequence_length: 1024
+seed: 2023
+dtype: float32
+device_map: cuda:0
+preprocessing_workers: 4
+preprocessing_batch_size: 1024
+dataloader_workers: 4
+arrow_file: null
+modules: [self_attn.k_proj, self_attn.o_proj, mlp.up_proj, mlp.down_proj]
+local_text_file: null
+trust_remote_code: false
